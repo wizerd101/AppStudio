@@ -1,16 +1,14 @@
 package com.example.bigmac.mr_potato_head;
 
-import android.content.res.Resources;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.Toast;
+
 
 
 public class MainActivity extends ActionBarActivity {
