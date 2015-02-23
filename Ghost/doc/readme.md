@@ -2,7 +2,7 @@
 Project title: Ghost for Android
 ================================
 
-#project description#
+#Project description#
 Ghost is a letter game, two players add a letter to the non excisting word. The player who makes it a real word loses.
 
 #Features:#
