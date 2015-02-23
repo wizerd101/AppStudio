@@ -34,7 +34,7 @@ Ghost is a letter game, two players add a letter to the non excisting word. The 
 -Finally, there must also be a way to immediately start a new game or change the player’s names. 
 
 #Sketches#
-The sketches can be found in the doc folder
+The sketches can also be found in the img folder
 
 ![Start screen](img/start.jpg)
 ![Game play](img/game.jpg)
@@ -44,19 +44,24 @@ The sketches can be found in the doc folder
 
 #used frameworks#
 
-Java, Android, XML
+The application will be written in native Android application written in Java. Lots of build-in classes will be used and XML for the activities.
 
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.ImageView;
-import android.database.sqllite;
-import android.text
-import android.text.format
-import android.text.method
+Depening of possibilty of testing on an Android 5.+ device, i'll be using the material design guidelines, patterns and colors. Otherewise I'll be using the design guidelnies, patterns and colors of Android 4.4. Kit Kat.
+
+Gestures:
+Most gestures will be single touch gestures, tapping the settings icon will open the menu or swiping it to the top off the screen will open it.
+
+Navigition:
+Use of the back button on the screen will bring you back to the start screen.
+
+Full screen:
+The game will be played in full screen, so players are not distracted by any notifications in the top system bar. The systems bars can be brought back by swiping from any side edge of the screen.
+
+Acknowledging:
+There will be an acknowledging screen when a player has won the game, this wont a toast screen but a bigger screen which will be displayed for 10 seconds so people can read the reason for winning and the defenition of the possible real word.
+
+Settings:
+For certains features, there is the need to give the players an option for settings. 
 
 
 
