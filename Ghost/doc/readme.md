@@ -36,7 +36,11 @@ Ghost is a letter game, two players add a letter to the non excisting word. The 
 #Sketches#
 The sketches can be found in the doc folder
 
-![Alt text](doc/display1.jpg)
+![Start screen](img/start.jpg)
+![Game play](img/game.jpg)
+![Settings](img/settings.jpg)
+![Win](img/win.jpg)
+![Highscore](img/highscore.jpg)
 
 #used frameworks#
 
