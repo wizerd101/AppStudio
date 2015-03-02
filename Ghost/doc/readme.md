@@ -42,7 +42,7 @@ The sketches can also be found in the img folder
 ![Win](img/win.jpg)
 ![Highscore](img/highscore.jpg)
 
-#used frameworks#
+#Used frameworks#
 
 The application will be written in native Android application written in Java. Lots of build-in classes will be used and XML for the activities.
 
