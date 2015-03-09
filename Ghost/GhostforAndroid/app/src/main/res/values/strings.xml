@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ghost for Android</string>
+    <string name="action_settings">action_settings</string>
+    <string name="exit_app">Exit_app</string>
+    <string name="welcomeMessage">Welcome to Ghost</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="explainGame">Type in the next letter:</string>
+
+</resources>
