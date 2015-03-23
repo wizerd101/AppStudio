@@ -31,13 +31,6 @@
             android:gravity="center"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/choosePlayerText"
-            android:text="@string/ChoosePlayerText"
-
-            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,13 +52,13 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Space burger"
+                android:hint="@string/hintName"
                 android:id="@+id/newPlayerEditText"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="add"
+                android:text="@string/addNameButton"
                 android:id="@+id/addNewPlayer"
                 android:onClick="addPlayer"/>
         </LinearLayout>
@@ -109,7 +102,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/showDialog"
-                android:text="Rules"
+                android:text="@string/rulesButton"
                 android:onClick="rulesDialog"
                 android:layout_weight="1"
 

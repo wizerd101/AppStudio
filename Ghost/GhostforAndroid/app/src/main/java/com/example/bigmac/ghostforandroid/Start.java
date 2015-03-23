@@ -1,21 +1,14 @@
 package com.example.bigmac.ghostforandroid;
 
 import android.app.AlertDialog;
-import android.app.Service;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
 import java.util.ArrayList;
@@ -25,7 +18,6 @@ import java.util.ArrayList;
  */
 public class Start extends ActionBarActivity{
 
-    Menu menu;
     Players p = new Players();
 
     static ArrayList<Integer> checkBoxIds = new ArrayList<Integer>();
@@ -41,28 +33,11 @@ public class Start extends ActionBarActivity{
         checkBoxIds.clear();
         loadPreviousPlayers();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle presses on the action bar items
-        switch (item.getItemId()) {
-            case R.id.backToStart:
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-
 
     public static String getLanguage(){
         return language;
     }
+
     public static ArrayList<Player> getSelectedPlayersArrayList(){
         return selectedPlayers;
     }
@@ -94,13 +69,13 @@ public class Start extends ActionBarActivity{
 
         }else if(selectedPlayers.size() > 2){
 
-            CharSequence message = "You have selected to much selectedPlayers";
+            CharSequence message = "You have selected to much players";
             android.widget.Toast toMuchPlayers = android.widget.Toast.makeText(context, message, duration);
             toMuchPlayers.show();
 
         }else if(selectedPlayers.size() < 2){
 
-            CharSequence message = "You have selected not enough selectedPlayers";
+            CharSequence message = "You have selected not enough players";
             android.widget.Toast toMuchPlayers = android.widget.Toast.makeText(context, message, duration);
             toMuchPlayers.show();
 

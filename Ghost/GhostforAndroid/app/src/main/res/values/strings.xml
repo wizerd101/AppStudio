@@ -10,16 +10,23 @@
     <string name="ChoosePlayerText">Choose one of the existing players</string>
     <string name="settings">Settings</string>
     <string name="letsPlay">Lets play</string>
-    <string name="newPlayer">Or create a new player</string>
+    <string name="newPlayer">Choose one of the existing players or create a new player</string>
     <string name="rules">Players form a word by alternating turns saying a letter,
-        which is added on to the end of the word fragment. There are two ways to lose Ghost:
+        which is added on to the end of the word fragment.
+        There are two ways to lose Ghost:
         Forming a word longer than 3 letters (“PEA” is ok, but “PEAR” is not).
         Creating a fragment (of any size) which cannot become a word by adding
-        more letters (for example, “QZ”). Winning Ghost is simply not losing!</string>
+        more letters (for example, “QZ”).
+        Winning Ghost is simply not losing!</string>
     <string name="MenuSettings">Settings</string>
     <string name="MenuStart">Go to Start</string>
     <string name="MenuRules">Rules</string>
     <string name="MenuClose">Close Ghost</string>
-    <string name="toHighScore">go to the highscores</string>
+    <string name="toHighScore">go to the high scores</string>
+    <string name="hintName">Space burger</string>
+    <string name="addNameButton">add</string>
+    <string name="rulesButton">Rules</string>
+    <string name="formWord">Word formed:</string>
+    <string name="enterLetter">Enter a letter</string>
 
 </resources>
