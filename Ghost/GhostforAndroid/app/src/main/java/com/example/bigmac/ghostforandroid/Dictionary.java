@@ -1,6 +1,7 @@
 package com.example.bigmac.ghostforandroid;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -8,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashSet;
-import java.util.Iterator;
+
 
 /**
  * Created by Bastiaan Waanders on 02-03-15.
@@ -17,15 +18,21 @@ import java.util.Iterator;
 public class Dictionary {
 
     static HashSet<String> dictionaryHash = new HashSet<String>();
-    static Iterator iterator = dictionaryHash.iterator();
     static boolean match = true;
 
 
-    Dictionary(Context context) {
+    Dictionary(Context context, String language) {
 
         String word;
+        InputStream dictionaryStream = null;
 
-        InputStream dictionaryStream = context.getResources().openRawResource(R.raw.english);
+        if(language.equals("dutch")){
+            dictionaryStream = context.getResources().openRawResource(R.raw.dutch);
+        }
+        else{
+            dictionaryStream = context.getResources().openRawResource(R.raw.english);
+
+        }
 
         InputStreamReader inputReader = new InputStreamReader(dictionaryStream);
         BufferedReader buffReader = new BufferedReader(inputReader);
@@ -33,14 +40,7 @@ public class Dictionary {
 
         try {
             while ((word = buffReader.readLine()) != null) {
-                /* only relevant for hashtable
-                ArrayList<String> subString = new ArrayList<String>();
-
-                for(int letter = 1; letter <= word.length(); letter++){
-                    subString.add(word.substring(0, letter));
-                }*/
-
-                dictionaryHash.add(word); //HASHTABLE, subString);
+                dictionaryHash.add(word);
             }
         } catch (IOException e) {
 
@@ -55,31 +55,28 @@ public class Dictionary {
             checkMatchSubstring(word);
         } else if(dictionaryHash.contains(word)){
             match = false;
-            //Log.v("Status", "You lose");
         }else{
             checkMatchSubstring(word);
-            //Log.v("Status", "You can play on");
         }
         return match;
     }
+
     public static boolean checkMatchSubstring(String word){
         String subString;
         boolean checkMatch = false;
         for (String realWord : dictionaryHash) {
 
-            for (int letter = 1; letter < realWord.length() && checkMatch == false ; letter++) {
+            for (int letter = 1; letter < realWord.length() && !checkMatch; letter++) {
                 subString = realWord.substring(0, letter);
 
                 if (word.equals(subString)) {
                     match = true;
                     checkMatch = true;
-                    //Log.v("Status", "You can play on");
                     break;
                 }
 
                 else {
                     match = false;
-                    //Log.v("Status", "You lose substring was: " + subString +" word was: "+ word);
                 }
             }
         }

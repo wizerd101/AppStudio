@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="HIGHSCORES"
+        android:textSize="40dp"
+        android:layout_weight="2"/>
+
+        <ScrollView
+            android:layout_height="0dp"
+            android:layout_width="fill_parent"
+            android:layout_weight="6">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/highScoreList"
+                android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play again"
+        android:onClick="playAgain"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to start"
+        android:onClick="toStart"/>
+    </LinearLayout>
+
+</LinearLayout>

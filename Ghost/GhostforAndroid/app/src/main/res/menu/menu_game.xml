@@ -5,5 +5,10 @@
         android:title="@string/MenuStart"
         android:orderInCategory="101"
         />
+    <item
+        android:id="@+id/restartGame"
+        android:title="Restart the game"
+        android:orderInCategory="102"
+        />
 
 </menu>
